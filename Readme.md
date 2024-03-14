@@ -22,6 +22,6 @@ The setup contains the following components:
 - Eclipse Kuksa.val - **KUKSA Databroker** (pre-installed with Eclipse Leda)
 - **Mock Service**: Example provider for Eclipse Kuksa.VAL which mocks the behavior of the vehicle.
 
-In the following paragraphs, we next introduce the [architecture and the assumed data flow](https://sdv-blueprints.eclipse.dev/docs/companion-application/architecture-seat-adjuster)
-before we explain the [development](./develop-seat-adjuster.md) and [deployment](./deploy-seat-adjuster.md) steps.
-If you are more interested in the general development steps, you may directly jump to the [develop seat adjuster](./develop-seat-adjuster.md).
+In the following paragraphs, we introduce the [architecture and the assumed data flow](https://sdv-blueprints.eclipse.dev/docs/companion-application/architecture-seat-adjuster)
+before we explain the [development](https://sdv-blueprints.eclipse.dev/docs/companion-application/develop-seat-adjuster) and [deployment](https://sdv-blueprints.eclipse.dev/docs/companion-application/deploy-seat-adjuster) steps.
+If you are more interested in the general development steps, you may directly jump to the [develop seat adjuster](https://sdv-blueprints.eclipse.dev/docs/companion-application/develop-seat-adjuster).
