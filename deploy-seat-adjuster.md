@@ -74,6 +74,9 @@ Since they consume resources and are not needed for the seat adjustment, you may
 
 ### Use `kanto-cm`
 
+> Replace <YOUR_ORG> with your username
+> Replace <CONTAINER_IMAGE> with your container image which you can find in Code > Packages. If you can't find it likely means that the workflow has failed (CI, MultiArch or Release)
+ 
 ```bash
 kanto-cm create \
     --name seatadjuster-app \
@@ -83,6 +86,16 @@ kanto-cm create \
     --e="SDV_MIDDLEWARE_TYPE=native" \
     --hosts="databroker:container_databroker-host, mosquitto:host_ip, seatservice-example:container_seatservice-example-host" \
     ghcr.io/<YOUR_ORG>/seat-adjuster-app:latest
+
+kanto-cm start --name seatadjuster-app
+kanto-cm logs --name seatadjuster-app
+```
+
+This command might not work as is it multiline.
+To solve this, try running each command as one-liner:
+
+```bash
+kanto-cm create --name seatadjuster-app --e="SDV_SEATSERVICE_ADDRESS=grpc://seatservice-example:50051" --e="SDV_MQTT_ADDRESS=mqtt://mosquitto:1883" --e="SDV_VEHICLEDATABROKER_ADDRESS=grpc://databroker:55555" --e="SDV_MIDDLEWARE_TYPE=native" --hosts="databroker:container_databroker-host, mosquitto:host_ip, seatservice-example:container_seatservice-example-host" ghcr.io/<YOUR_ORG>/<CONTAINER_IMAGE>:<tag>
 
 kanto-cm start --name seatadjuster-app
 kanto-cm logs --name seatadjuster-app
