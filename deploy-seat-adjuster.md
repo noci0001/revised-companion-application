@@ -25,6 +25,18 @@ or
 kanto-cm list
 ```
 
+## Note about system file structure:
+> In the next steps we will write in total 3 files (seat-application.json, mockservice.json, mock.py) inside 2 important directories: /data/var/containers/manifest/ and /data/var/mock > Before continuing with this guide, make sure to be in the right directory, run:
+```
+cd ~/../..
+```
+> If you want, you can already create the mock directories that will constitute the python script to run mockservice:
+```
+mkdir ~/../../data/var/mock/
+touch ~/../../data/var/mock/mock.py
+```
+> If you don't, you will be reminded later.
+
 From this list, ensure that at least the KUKSA Databroker runs, which should be the case since it is are pre-configured
 with the Eclipse Leda release.
 
