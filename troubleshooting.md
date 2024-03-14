@@ -12,6 +12,11 @@
 > Retry the run the workflow.
 > If it is still not working, the problem is caused by wrongly set permissions in you Github. To fix this, go to your repo Settings > Action > General and if you scroll at the bottom you can check Read and Write permissions.
 
+### If you are getting a 401 Unauthorized error when trying to obtain the image of your application
+>You must first navigate to Code -> Package -> Package Settings
+>Scroll to the bottom and within the Danger Zone change the visibility if it is set to private to public. 
+>kanto-cm create will now correctly create the container from your application.
+
 ## DOCKER & DEVCONTAINERS TROUBLESHOOTING
 
 ### If you are having issues with reopening the project in a DevContainer 
