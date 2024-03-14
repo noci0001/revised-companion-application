@@ -1,9 +1,22 @@
-# Troubleshooting
+# TROUBLESHOOTING
+
+## GENERAL TROUBLESHOOTING
+
+### There was an error creating your Release: tag name can't be blank, tag name is not well-formed, published releases must have a valid tag.
+> During the process of Publishing the Release, make sure to add a meaningful tag or you will be blocked by the following error: 
+ 
+### CI MULTIARCH RELEASE WORKFLOW FAILING
+> If any of the workflow (CI, Multiarch, Release) fail there is likely a misconfiguration of the permissions in your github repo.
+> Firstly, make sure that the repo is private.
+> Once you have excluded that problem, you can go to your GitHub settings, tokens and then inspect the token assigned to this repo.
+> Retry the run the workflow.
+> If it is still not working, the problem is caused by wrongly set permissions in you Github. To fix this, go to your repo Settings > Action > General and if you scroll at the bottom you can check Read and Write permissions.
 
 ## DOCKER & DEVCONTAINERS TROUBLESHOOTING
 
 ### If you are having issues with reopening the project in a DevContainer 
 _e.g. "Is Docker deamon not running"_
+
 You can try fixing this initial issue by opening VSCode with sudo rights.
 To acheive this, close your VSCode window and run this command in the terminal:
 
@@ -36,10 +49,9 @@ docker context use default
 
 Once you have switched to a different context, try reopening in DevContainer.
 
-
 ## If nothing works
   
-  you can try purging and reinstalling the entire Docker:
+you can try purging and reinstalling the entire Docker:
 
 ```
 sudo apt-get purge docker-ce docker-ce-cli containerd.io
