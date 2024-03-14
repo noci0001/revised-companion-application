@@ -49,7 +49,7 @@ docker context use default
 
 Once you have switched to a different context, try reopening in DevContainer.
 
-## If nothing works
+### If nothing works
   
 you can try purging and reinstalling the entire Docker:
 
