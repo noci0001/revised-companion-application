@@ -58,6 +58,7 @@ and which we replace later with the `mock service`.
 Therefore, we need to stop the `feedercan` and the `seatservice-example` container.
 This is possible in `kantui` by selecting the respective entry and pressing `R`.
 > If uppercase `R` does not work, try with lowercase `r` and make sure to wait about 10 seconds for the container to be disabled. 
+
 In addition, you need to remove the corresponding container manifests in `/data/var/containers/manifests` to avoid that the Eclipse Kanto
 auto-deployer re-deploys these containers. Another approach is to change the ending of the not-needed manifests to something other than `.json`.
 
