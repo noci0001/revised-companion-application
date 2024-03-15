@@ -131,6 +131,7 @@ We use the [Eclipse Velocitas CLI](https://github.com/eclipse-velocitas/cli) to 
 ```bash
 velocitas exec runtime-local up
 ```
+![velocitas exec runtime-local up](./companion-app-screenshots/1_velocitas_exec_runtime.png)
 
 The local runtime allows you to debug your Python vehicle app code, which is the reason to use this runtime during debugging.
 Later, e.g., when you want to run your app in a similar environment as it would run on the target environment, like Eclipse Leda, we can use the respective runtime as explained below in [Kanto Runtime](#kanto-runtime):
