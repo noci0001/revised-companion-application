@@ -148,6 +148,9 @@ Here, you can publish a message on the topic:
 ``"seatadjuster/setPosition/request"``
 
 , to which the function registers itself.
+
+![publish_with_mosquitto](./companion-app-screenshots/3_publish_with_mosquitto_local.png)
+
 After sending the message to the topic, the debugger should be activated and the editor should open to step through your code.
 
 When you complete your debugging session, you can also [close the local environment](https://eclipse.dev/velocitas/docs/tutorials/quickstart/quickstart/#how-to-start-the-runtime-services) by pressing ``Ctrl + C`` in the terminal in which you started the local runtime.
@@ -159,6 +162,7 @@ To run your application within a container in Eclipse Kanto locally, simply use 
 ```bash
 velocitas exec runtime-kanto up
 ```
+![velocitas exec runtime-kanto up](./companion-app-screenshots/4_runtime_kanto_up.png)
 
 Once the runtime is available, we add our application by executing:
 
@@ -194,6 +198,8 @@ You can trigger the pre-commit as a task in VSCode:
 
 The pre commit action should start in a terminal inside VSCode.
 
+![pre_commit_action](./companion-app-screenshots/5_pre_commit_action.png)
+
 You can check the available tasks configured by Eclipse Velocitas in `.vscode/tasks.json`.
 
 If the pre-commit was successful, you may push your changes and open the repository in the browser.
@@ -203,8 +209,13 @@ In the meantime, the push should trigger the `CI workflow` and the `Build multia
 You can grant more `Workflow permissions` in the `Settings` tab of the repository under `Actions`-> `General`.
 
 To deploy your application to a target and if the two workflows have finished successfully, you can perform a release in GitHub.
+
+![release](./companion-app-screenshots/6_where_release.png)
+
 The subsequent release workflow will make the application available as a built container in the container registry of GitHub (`Code` -> `Packages`).
 To do the release in GitHub, go to the `Code` tab and click `Releases` on the right side of the page.
-Then you can `Draft a new release`, create a new tag and title for the release, and click `Publish Release`, which triggers the `Release workflow`.
+Then you can `Draft a new release`, make sure to create a new tag and title for the release, and click `Publish Release`, which triggers the `Release workflow`.
+
+![pre_release_plus_tag](./companion-app-screenshots/8_pre_release_plus_tag.png)
 
 The next step is to [deploy the seat adjuster in Eclipse Leda](./deploy-seat-adjuster.md)
