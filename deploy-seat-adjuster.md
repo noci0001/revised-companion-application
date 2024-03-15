@@ -1,6 +1,6 @@
 # Deploy Application
 
-We now want to deploy the application to a target device.<>
+We now want to deploy the application to a target device.
 You may follow the remainder of this guide on a separate device like a RaspberryPi, but you can emulate such a device on your development machine too.
 Either way, we use Eclipse Leda in version 0.1.0-M2 as the target system, which is a Linux-based distribution with pre-installed SDV components like the KUKSA Databroker
 and Eclipse Kanto for container management.
@@ -74,8 +74,6 @@ Since they consume resources and are not needed for the seat adjustment, you may
 
 ### Use `kanto-cm`
 
-> Replace <YOUR_ORG> with your username
-> Replace <CONTAINER_IMAGE> with your container image which you can find in Code > Packages. If you can't find it likely means that the workflow has failed (CI, MultiArch or Release)
  
 ```bash
 kanto-cm create \
@@ -85,11 +83,14 @@ kanto-cm create \
     --e="SDV_VEHICLEDATABROKER_ADDRESS=grpc://databroker:55555" \
     --e="SDV_MIDDLEWARE_TYPE=native" \
     --hosts="databroker:container_databroker-host, mosquitto:host_ip, seatservice-example:container_seatservice-example-host" \
-    ghcr.io/<YOUR_ORG>/seat-adjuster-app:latest
+    ghcr.io/<YOUR_ORG>/<CONTAINER_IMAGE>:<TAG>
 
 kanto-cm start --name seatadjuster-app
 kanto-cm logs --name seatadjuster-app
 ```
+
+> Replace <YOUR_ORG> with your username
+> Replace <CONTAINER_IMAGE> with your container image which you can find in Code > Packages. If you can't find it likely means that the workflow has failed (CI, MultiArch or Release)
 
 This command might not work as is it multiline.
 To solve this, try running each command as one-liner:
