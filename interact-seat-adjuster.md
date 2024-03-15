@@ -16,6 +16,8 @@ mosquitto_pub -t seatadjuster/setPosition/request -m '{"position": 1000, "reques
 You may need to open a second terminal session to send the message.
 In the QEMU setup, you can do this through an SSH connection from the host machine by running `ssh -p 2222 root@localhost`.
 
+![ssh-connecting](./companion-app-screenshots/9_connecting_with_ssh.png)
+
 After publishing the setPosition-message, the expected output for the `seatadjuster/#` subscription should look like this:
 
 ```bash

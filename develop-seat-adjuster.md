@@ -205,6 +205,10 @@ You can check the available tasks configured by Eclipse Velocitas in `.vscode/ta
 If the pre-commit was successful, you may push your changes and open the repository in the browser.
 In the meantime, the push should trigger the `CI workflow` and the `Build multiarch image` workflow, which you can track in the `Actions` tab.
 
+![CI_workflow](./companion-app-screenshots/pre_commit_action_CI_workflow.png)
+
+![MULTIARCH](./companion-app-screenshots/pre_commit_build_multiarch.png)
+
 > If you set your copy of the template repository to private, the `CI workflow` may fail due to missing permissions to write container images to GitHub packages.
 You can grant more `Workflow permissions` in the `Settings` tab of the repository under `Actions`-> `General`.
 

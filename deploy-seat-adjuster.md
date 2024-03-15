@@ -1,6 +1,6 @@
 # Deploy Application
 
-We now want to deploy the application to a target device.
+We now want to deploy the application to a target device.<>
 You may follow the remainder of this guide on a separate device like a RaspberryPi, but you can emulate such a device on your development machine too.
 Either way, we use Eclipse Leda in version 0.1.0-M2 as the target system, which is a Linux-based distribution with pre-installed SDV components like the KUKSA Databroker
 and Eclipse Kanto for container management.

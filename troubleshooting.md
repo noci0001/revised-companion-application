@@ -10,7 +10,13 @@
 > Firstly, make sure that the repo is private.
 > Once you have excluded that problem, you can go to your GitHub settings, tokens and then inspect the token assigned to this repo.
 > Retry the run the workflow.
-> If it is still not working, the problem is caused by wrongly set permissions in you Github. To fix this, go to your repo Settings > Action > General and if you scroll at the bottom you can check Read and Write permissions.
+> If it is still not working, the problem is caused by wrongly set permissions in you Github. To fix this, go to your repo Settings > Action > General 
+
+![action->General](./companion-app-screenshots/actions_general.png)
+
+and if you scroll at the bottom you can check Read and Write permissions.
+
+![read-and-write](./companion-app-screenshots/action_general_workflow_permissions.png)
 
 ### If you are getting a 401 Unauthorized error when trying to obtain the image of your application
 >You must first navigate to Code -> Package -> Package Settings
