@@ -141,6 +141,7 @@ As an initial step, you need to set a breakpoint at the location of interest by 
 In the case of the Seat Adjuster application, we can debug the function ``on_set_position_request_received`` by placing a breakpoint inside the function.
 To trigger the execution of this function, send and receive MQTT messages with the VSMQTT plugin through the pre-configured local configuration (``mosquitto (local)``).
 You find the plugin with a cloud icon in the left side of the VSCode instance connected to the DevContainer.
+![Cloud Icon](./companion-app-screenshots/2_mqtt_cloud_icon(edited).png)
 
 Here, you can publish a message on the topic:
 
