@@ -36,16 +36,11 @@
    - Disable (`kanto-cm list` and then `r` ot remove the container you are hovering on) interfering containers: `feedercan, seatservice-example, cloudconnector, hvacservice-example, sua, vum`.
    - Start container (2 ways)
       - Option A: with KANTO-CM:
-         - kanto-cm create \
-            --name seatadjuster-app \
-            --e="SDV_SEATSERVICE_ADDRESS=grpc://seatservice-example:50051" \
-            --e="SDV_MQTT_ADDRESS=mqtt://mosquitto:1883" \
-            --e="SDV_VEHICLEDATABROKER_ADDRESS=grpc://databroker:55555" \
-            --e="SDV_MIDDLEWARE_TYPE=native" \
-            --hosts="databroker:container_databroker-host, mosquitto:host_ip, seatservice-example:container_seatservice-example-host" \
-            ghcr.io/<YOUR_ORG>/seat-adjuster-app:latest
-            - the ghcr.io string with the image inside your packages. e.g.:
-            `docker pull ghcr.io/noci0001/my-seat-adjuster/seatadjuster:1`
+`
+kanto-cm create --name seatadjuster-app --e="SDV_SEATSERVICE_ADDRESS=grpc://seatservice-example:50051" --e="SDV_MQTT_ADDRESS=mqtt://mosquitto:1883" --e="SDV_VEHICLEDATABROKER_ADDRESS=grpc://databroker:55555" --e="SDV_MIDDLEWARE_TYPE=native" --hosts="databroker:container_databroker-host, mosquitto:host_ip, seatservice-example:container_seatservice-example-host" ghcr.io/<YOUR_ORG>/seat-adjuster-app:latest
+`
+         - the ghcr.io string with the image inside your packages. e.g.:
+         `docker pull ghcr.io/noci0001/my-seat-adjuster/seatadjuster:1`
          - `kanto-cm start --name seatadjuster-app`
          - `kanto-cm logs --name seatadjuster-app`
       - Option B: adding container manifest
