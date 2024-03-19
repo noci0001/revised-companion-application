@@ -33,7 +33,7 @@
       - (do not continue to device provisioning)
 - Inside Qemu Leda
    - check containers with `kantui` or `kanto-cm list`
-   - Disable (`kanto-cm list` and then `r` ot remove the container you are hovering on) interfering containers: feedercan, seatservice-example, cloudconnector, hvacservice-example, sua, vum.
+   - Disable (`kanto-cm list` and then `r` ot remove the container you are hovering on) interfering containers: `feedercan, seatservice-example, cloudconnector, hvacservice-example, sua, vum`.
    - Start container (2 ways)
       - Option A: with KANTO-CM:
          - kanto-cm create \
